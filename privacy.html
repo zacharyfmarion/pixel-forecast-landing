@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Pixel Forecast</title>
+    <title>Privacy - Pixel Forecast</title>
     <style>
+        @font-face {
+            font-family: 'Monogram';
+            src: url('monogram.ttf') format('truetype');
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -12,11 +17,13 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: 'Monogram', monospace;
             background: #1a1a2e;
             min-height: 100vh;
-            color: #e0e0e0;
-            line-height: 1.7;
+            color: #ccc;
+            font-size: 22px;
+            letter-spacing: 1px;
+            line-height: 1.6;
         }
         
         .container {
@@ -25,37 +32,52 @@
             padding: 60px 20px;
         }
         
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: #fff;
+        .back {
+            display: inline-block;
+            color: #8888aa;
+            text-decoration: none;
+            margin-bottom: 40px;
+            font-size: 20px;
         }
         
-        .updated {
-            color: #808090;
-            margin-bottom: 40px;
+        .back:hover {
+            color: #ffc857;
+        }
+        
+        h1 {
+            font-size: 48px;
+            color: #ffc857;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .date {
+            color: #555577;
+            margin-bottom: 50px;
+            font-size: 18px;
         }
         
         h2 {
-            font-size: 1.4rem;
-            margin-top: 35px;
-            margin-bottom: 15px;
+            font-size: 28px;
             color: #ffc857;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
         
         p {
             margin-bottom: 15px;
-            color: #c0c0d0;
+            color: #aaaacc;
         }
         
         ul {
-            margin-left: 25px;
+            margin-left: 30px;
             margin-bottom: 15px;
         }
         
         li {
-            margin-bottom: 8px;
-            color: #c0c0d0;
+            margin-bottom: 10px;
+            color: #aaaacc;
         }
         
         a {
@@ -66,58 +88,38 @@
         a:hover {
             text-decoration: underline;
         }
-        
-        .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: #a0a0c0;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="index.html" class="back">← Back</a>
         
-        <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: January 24, 2026</p>
+        <h1>Privacy</h1>
+        <p class="date">Updated January 2026</p>
         
         <h2>Overview</h2>
-        <p>Pixel Forecast ("the App") is committed to protecting your privacy. This policy explains how we handle your information.</p>
+        <p>Pixel Forecast is committed to your privacy. This policy explains how we handle your data.</p>
         
-        <h2>Information We Collect</h2>
-        <p>The App collects the following information:</p>
+        <h2>Location Data</h2>
+        <p>When you grant permission, we access your location to show local weather. This data is:</p>
         <ul>
-            <li><strong>Location Data:</strong> When you grant permission, we access your device's location to provide local weather information. This data is used only to fetch weather data and is not stored or transmitted to our servers.</li>
+            <li>Used only to fetch weather</li>
+            <li>Never stored on our servers</li>
+            <li>Never sold or shared</li>
         </ul>
         
-        <h2>How We Use Your Information</h2>
-        <p>Your location is used solely to:</p>
+        <h2>Third Parties</h2>
+        <p>We use these services:</p>
         <ul>
-            <li>Retrieve current weather conditions for your area</li>
-            <li>Display hourly and daily forecasts for your location</li>
+            <li><strong>Apple WeatherKit</strong> - Weather data</li>
+            <li><strong>Open-Meteo</strong> - City search</li>
         </ul>
         
-        <h2>Data Storage</h2>
-        <p>The App does not store your location data. Each time you open the App, your current location is requested (with your permission) to fetch fresh weather data. We do not maintain any database of user locations.</p>
+        <h2>No Tracking</h2>
+        <p>We do not use analytics, advertising, or tracking of any kind.</p>
         
-        <h2>Third-Party Services</h2>
-        <p>The App uses the following third-party services:</p>
-        <ul>
-            <li><strong>Apple WeatherKit:</strong> To provide weather data. Your approximate location is sent to Apple's weather service. Please refer to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a> for more information.</li>
-            <li><strong>Open-Meteo Geocoding:</strong> When you search for cities, your search query is sent to Open-Meteo's geocoding service.</li>
-        </ul>
-        
-        <h2>Data Sharing</h2>
-        <p>We do not sell, trade, or otherwise transfer your personal information to third parties. Location data is only shared with weather services as described above to provide the App's core functionality.</p>
-        
-        <h2>Children's Privacy</h2>
-        <p>The App does not knowingly collect personal information from children under 13. The App is suitable for all ages and contains no objectionable content.</p>
-        
-        <h2>Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
-        
-        <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:dazackypoo@gmail.com">dazackypoo@gmail.com</a>.</p>
+        <h2>Contact</h2>
+        <p>Questions? Email <a href="mailto:zacharyfmarion@gmail.com">zacharyfmarion@gmail.com</a></p>
     </div>
 </body>
 </html>

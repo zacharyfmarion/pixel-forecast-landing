@@ -3,159 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Forecast - Beautiful Retro Weather</title>
+    <title>Pixel Forecast</title>
     <style>
+        @font-face {
+            font-family: 'Monogram';
+            src: url('monogram.ttf') format('truetype');
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            image-rendering: pixelated;
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            font-family: 'Monogram', monospace;
+            background: #1a1a2e;
             min-height: 100vh;
             color: #fff;
+            font-size: 24px;
+            letter-spacing: 1px;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
         
         .icon {
-            width: 150px;
-            height: 150px;
-            border-radius: 30px;
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
         
         h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            background: linear-gradient(90deg, #ffc857, #e9724c, #c5283d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 64px;
+            margin-bottom: 20px;
+            color: #ffc857;
+            text-transform: uppercase;
+            letter-spacing: 4px;
         }
         
         .tagline {
-            font-size: 1.3rem;
-            color: #a0a0c0;
-            margin-bottom: 40px;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin: 50px 0;
-            text-align: left;
-        }
-        
-        .feature {
-            background: rgba(255,255,255,0.05);
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .feature h3 {
-            color: #ffc857;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-        
-        .feature p {
-            color: #a0a0c0;
-            font-size: 0.95rem;
-            line-height: 1.5;
+            font-size: 28px;
+            color: #8888aa;
+            margin-bottom: 60px;
         }
         
         .screenshots {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin: 50px 0;
+            gap: 30px;
+            margin: 60px 0;
             flex-wrap: wrap;
         }
         
         .screenshots img {
-            height: 400px;
+            height: 450px;
             width: auto;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            border-radius: 16px;
+            border: 3px solid #333355;
         }
         
-        @media (max-width: 768px) {
-            .screenshots img {
-                height: 300px;
-            }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 80px 0;
+            flex-wrap: wrap;
+        }
+        
+        .feature {
+            text-align: center;
+            max-width: 200px;
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .feature h3 {
+            color: #ffc857;
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .feature p {
+            color: #8888aa;
+            font-size: 20px;
+            line-height: 1.4;
         }
         
         .app-store-badge {
-            margin-top: 40px;
+            margin: 60px 0;
         }
         
         .app-store-badge img {
-            height: 50px;
+            height: 60px;
         }
         
         footer {
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #606080;
-            font-size: 0.9rem;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 2px solid #333355;
+            color: #555577;
+            font-size: 20px;
         }
         
         footer a {
-            color: #a0a0c0;
+            color: #8888aa;
             text-decoration: none;
+            margin: 0 20px;
         }
         
         footer a:hover {
-            color: #fff;
+            color: #ffc857;
         }
         
         .links {
-            margin-top: 15px;
+            margin-top: 20px;
         }
         
-        .links a {
-            margin: 0 15px;
+        @media (max-width: 768px) {
+            h1 { font-size: 48px; }
+            .tagline { font-size: 22px; }
+            .screenshots img { height: 300px; }
+            .features { gap: 40px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="icon.png" alt="Pixel Forecast Icon" class="icon">
+        <img src="icon.png" alt="Pixel Forecast" class="icon">
         
         <h1>Pixel Forecast</h1>
-        <p class="tagline">Beautiful retro weather at a glance</p>
+        <p class="tagline">Weather, beautifully retro</p>
+        
+        <div class="screenshots">
+            <img src="screenshots/sunset.png" alt="Sunset">
+            <img src="screenshots/cloudy.png" alt="Cloudy">
+            <img src="screenshots/snow.png" alt="Snow">
+        </div>
         
         <div class="features">
             <div class="feature">
-                <h3>Pixel Art Scenes</h3>
-                <p>Watch stunning pixel art backgrounds that change with the weather and time of day.</p>
+                <div class="feature-icon">🌅</div>
+                <h3>Dynamic</h3>
+                <p>Scenes change with time and weather</p>
             </div>
             <div class="feature">
-                <h3>Real-Time Weather</h3>
-                <p>Accurate forecasts powered by Apple WeatherKit with hourly and 7-day predictions.</p>
+                <div class="feature-icon">🎮</div>
+                <h3>Pixel Art</h3>
+                <p>Beautiful retro aesthetic</p>
             </div>
             <div class="feature">
-                <h3>Simple & Clean</h3>
-                <p>No ads, no clutter. Just beautiful weather information when you need it.</p>
+                <div class="feature-icon">📍</div>
+                <h3>Accurate</h3>
+                <p>Powered by Apple WeatherKit</p>
             </div>
-        </div>
-        
-        <div class="screenshots">
-            <img src="screenshots/sunset.png" alt="Sunset weather view">
-            <img src="screenshots/cloudy.png" alt="Cloudy weather view">
-            <img src="screenshots/snow.png" alt="Snow weather view">
         </div>
         
         <div class="app-store-badge">
@@ -165,10 +176,10 @@
         </div>
         
         <footer>
-            <p>&copy; 2026 Zachary Marion. All rights reserved.</p>
+            <p>2026 Zachary Marion</p>
             <div class="links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="mailto:dazackypoo@gmail.com">Contact</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="mailto:zacharyfmarion@gmail.com">Contact</a>
             </div>
         </footer>
     </div>
