@@ -16,6 +16,10 @@
             box-sizing: border-box;
         }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             font-family: 'Monogram', monospace;
             background: #1a1a2e;
@@ -23,10 +27,12 @@
             color: #fff;
             font-size: 24px;
             letter-spacing: 1px;
+            overflow-x: hidden;
         }
         
         .container {
-            max-width: 1100px;
+            width: 100%;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 60px 20px;
             text-align: center;
@@ -40,85 +46,90 @@
         }
         
         h1 {
-            font-size: 56px;
-            margin-bottom: 15px;
+            font-size: 48px;
+            margin-bottom: 12px;
             color: #ffc857;
             text-transform: uppercase;
             letter-spacing: 3px;
         }
         
         .tagline {
-            font-size: 26px;
+            font-size: 22px;
             color: #8888aa;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
+        }
+        
+        /* Screenshots - horizontal scroll on mobile */
+        .screenshots-wrapper {
+            width: 100%;
+            margin: 40px 0;
         }
         
         .screenshots {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            display: flex;
+            justify-content: center;
             gap: 20px;
-            margin: 50px 0;
-            padding: 0 10px;
         }
         
         .screenshots img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
+            height: 420px;
+            width: auto;
+            border-radius: 16px;
             border: 2px solid #333355;
+            flex-shrink: 0;
         }
         
         .features {
             display: flex;
             justify-content: center;
-            gap: 50px;
-            margin: 60px 0;
+            gap: 40px;
+            margin: 50px 0;
             flex-wrap: wrap;
         }
         
         .feature {
             text-align: center;
-            max-width: 180px;
+            width: 150px;
         }
         
         .feature-icon {
-            font-size: 40px;
-            margin-bottom: 12px;
+            font-size: 36px;
+            margin-bottom: 10px;
         }
         
         .feature h3 {
             color: #ffc857;
-            font-size: 22px;
-            margin-bottom: 8px;
+            font-size: 20px;
+            margin-bottom: 6px;
             text-transform: uppercase;
         }
         
         .feature p {
             color: #8888aa;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.4;
         }
         
         .app-store-badge {
-            margin: 50px 0;
+            margin: 40px 0;
         }
         
         .app-store-badge img {
-            height: 55px;
+            height: 50px;
         }
         
         footer {
-            margin-top: 60px;
-            padding-top: 30px;
+            margin-top: 50px;
+            padding-top: 25px;
             border-top: 2px solid #333355;
             color: #555577;
-            font-size: 18px;
+            font-size: 16px;
         }
         
         footer a {
             color: #8888aa;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 12px;
         }
         
         footer a:hover {
@@ -126,81 +137,98 @@
         }
         
         .links {
-            margin-top: 15px;
+            margin-top: 12px;
         }
         
-        /* Tablet */
-        @media (max-width: 900px) {
-            .screenshots {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-        }
-        
-        /* Mobile */
-        @media (max-width: 600px) {
+        /* Mobile styles */
+        @media (max-width: 700px) {
             .container {
-                padding: 40px 15px;
+                padding: 40px 0;
             }
             
             .icon {
                 width: 80px;
                 height: 80px;
                 border-radius: 18px;
+                margin-bottom: 20px;
             }
             
             h1 {
-                font-size: 36px;
+                font-size: 32px;
                 letter-spacing: 2px;
+                padding: 0 15px;
             }
             
             .tagline {
-                font-size: 20px;
+                font-size: 18px;
                 margin-bottom: 30px;
+                padding: 0 15px;
+            }
+            
+            /* Carousel on mobile */
+            .screenshots-wrapper {
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                padding: 0 20px;
+            }
+            
+            .screenshots-wrapper::-webkit-scrollbar {
+                display: none;
             }
             
             .screenshots {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-                margin: 30px 0;
+                justify-content: flex-start;
+                gap: 12px;
+                padding-right: 20px;
             }
             
             .screenshots img {
-                border-radius: 8px;
+                height: 320px;
+                border-radius: 12px;
                 border-width: 1px;
             }
             
             .features {
-                gap: 30px;
-                margin: 40px 0;
+                gap: 25px;
+                margin: 35px 0;
+                padding: 0 15px;
             }
             
             .feature {
-                max-width: 140px;
+                width: 100px;
             }
             
             .feature-icon {
-                font-size: 32px;
+                font-size: 28px;
             }
             
             .feature h3 {
-                font-size: 18px;
-            }
-            
-            .feature p {
-                font-size: 14px;
-            }
-            
-            .app-store-badge img {
-                height: 45px;
-            }
-            
-            footer {
                 font-size: 16px;
             }
             
+            .feature p {
+                font-size: 13px;
+            }
+            
+            .app-store-badge {
+                margin: 30px 0;
+            }
+            
+            .app-store-badge img {
+                height: 44px;
+            }
+            
+            footer {
+                margin-top: 40px;
+                padding: 20px 15px 0;
+                font-size: 14px;
+            }
+            
             footer a {
-                margin: 0 10px;
+                margin: 0 8px;
             }
         }
     </style>
@@ -212,28 +240,29 @@
         <h1>Pixel Forecast</h1>
         <p class="tagline">Weather, beautifully retro</p>
         
-        <div class="screenshots">
-            <img src="screenshots/sunset.png" alt="Sunset">
-            <img src="screenshots/night.png" alt="Night">
-            <img src="screenshots/cloudy.png" alt="Cloudy">
-            <img src="screenshots/snow.png" alt="Snow">
+        <div class="screenshots-wrapper">
+            <div class="screenshots">
+                <img src="screenshots/sunset.png" alt="Sunset">
+                <img src="screenshots/night.png" alt="Night">
+                <img src="screenshots/snow.png" alt="Snow">
+            </div>
         </div>
         
         <div class="features">
             <div class="feature">
                 <div class="feature-icon">🌅</div>
                 <h3>Dynamic</h3>
-                <p>Scenes change with time and weather</p>
+                <p>Changes with time & weather</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">🎮</div>
-                <h3>Pixel Art</h3>
-                <p>Beautiful retro aesthetic</p>
+                <h3>Retro</h3>
+                <p>Pixel art aesthetic</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">📍</div>
                 <h3>Accurate</h3>
-                <p>Powered by Apple WeatherKit</p>
+                <p>Apple WeatherKit</p>
             </div>
         </div>
         
