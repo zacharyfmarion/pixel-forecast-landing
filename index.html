@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Forecast - Beautiful Retro Weather</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .icon {
+            width: 150px;
+            height: 150px;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #ffc857, #e9724c, #c5283d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            color: #a0a0c0;
+            margin-bottom: 40px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+            text-align: left;
+        }
+        
+        .feature {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .feature h3 {
+            color: #ffc857;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .feature p {
+            color: #a0a0c0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .app-store-badge {
+            margin-top: 40px;
+        }
+        
+        .app-store-badge img {
+            height: 50px;
+        }
+        
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #606080;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #a0a0c0;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: #fff;
+        }
+        
+        .links {
+            margin-top: 15px;
+        }
+        
+        .links a {
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="icon.png" alt="Pixel Forecast Icon" class="icon">
+        
+        <h1>Pixel Forecast</h1>
+        <p class="tagline">Beautiful retro weather at a glance</p>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>Pixel Art Scenes</h3>
+                <p>Watch stunning pixel art backgrounds that change with the weather and time of day.</p>
+            </div>
+            <div class="feature">
+                <h3>Real-Time Weather</h3>
+                <p>Accurate forecasts powered by Apple WeatherKit with hourly and 7-day predictions.</p>
+            </div>
+            <div class="feature">
+                <h3>Simple & Clean</h3>
+                <p>No ads, no clutter. Just beautiful weather information when you need it.</p>
+            </div>
+        </div>
+        
+        <div class="app-store-badge">
+            <a href="#">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+        </div>
+        
+        <footer>
+            <p>&copy; 2026 Zachary Marion. All rights reserved.</p>
+            <div class="links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="mailto:dazackypoo@gmail.com">Contact</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
